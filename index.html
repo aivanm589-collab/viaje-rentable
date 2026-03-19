@@ -1384,21 +1384,7 @@ body::before {
 
 <!-- ═════════════════════════════════════ SIDE PANEL ═══ -->
 <div class="side-panel">
-  <!-- FF Guide button -->
-  <button onclick="document.getElementById('ff-doc').classList.add('visible')" style="
-    width:100%;padding:18px;border-radius:14px;border:1px solid rgba(79,127,255,0.35);
-    background:rgba(79,127,255,0.08);color:#7fa8ff;
-    font-size:14px;font-family:'Syne',sans-serif;font-weight:700;
-    cursor:pointer;letter-spacing:0.06em;
-  ">📘 VER GUÍA FLUTTERFLOW COMPLETA</button>
-
-  <div style="font-size:11px;color:rgba(238,242,255,0.25);font-family:'Inconsolata',monospace;text-align:center;line-height:1.7">
-    Este prototipo simula el flujo completo.<br>
-    La guía explica cada pantalla en FlutterFlow.
-  </div>
-</div>
-
-<!-- ═══════════════════════════════ FLUTTERFLOW DOC ═══ -->
+  <!-- ═══════════════════════════════ FLUTTERFLOW DOC ═══ -->
 <div class="ff-doc" id="ff-doc">
 <button class="close-btn" onclick="document.getElementById('ff-doc').classList.remove('visible')">✕ Cerrar</button>
 <h1>📘 DriverProfit — Guía FlutterFlow</h1>
@@ -1696,6 +1682,7 @@ function buildVehicleList() {
 }
 
 function selectVehicle(id, name, cpkm, cpm) {
+  try {
   selectedVehicle = id;
   document.querySelectorAll('.vehicle-card').forEach(c => c.classList.remove('selected'));
   document.querySelectorAll('[id^=vd-]').forEach(d => { d.style.background = ''; d.style.borderColor = ''; });
@@ -1721,11 +1708,9 @@ function selectVehicle(id, name, cpkm, cpm) {
   }
   document.getElementById('s3-mph').value   = APP.minProfitPerHour;
   updateStateDisplay();
-  try {
-    setTimeout(() => goTo(2.5), 400);
+  setTimeout(() => goTo(2.5), 400);
   } catch(e) {
-    console.error('goTo error:', e);
-    // Fallback: directly show s25
+    console.error('selectVehicle error:', e);
     setScreen('s25');
   }
 }
