@@ -1611,6 +1611,7 @@ let selectedVehicle = '';
 
 function updateStateDisplay() {
   const el = document.getElementById('state-display');
+  if (!el) return; // panel was removed
   const fields = [
     ['userType', APP.userType || '—'],
     ['vehicleType', APP.vehicleLabel || '—'],
