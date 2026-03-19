@@ -56,7 +56,12 @@
 }
 [data-theme="light"] html,
 [data-theme="light"] body {
-  background: #e2e5f0;
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 500px) {
+  body { background: #e2e5f0; }
 }
 [data-theme="light"] .phone-shell {
   border-color: rgba(0,0,0,0.12);
@@ -106,26 +111,47 @@ html, body {
   color: var(--text);
   font-family: 'Syne', sans-serif;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+@media (min-width: 500px) {
+  html, body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* ── Phone shell ── */
 .phone-shell {
-  width: 390px;
-  height: 844px;
+  width: 100%;
+  height: 100vh;
+  max-width: 480px;
   background: var(--bg);
-  border-radius: 50px;
-  border: 2px solid rgba(255,255,255,0.1);
-  box-shadow: 0 0 0 6px #0a0b0f, 0 40px 80px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.06);
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 500px) {
+  .phone-shell {
+    width: 390px;
+    height: 844px;
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 0 6px #0a0b0f, 0 40px 80px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+}
 
-/* notch */
+/* notch - only on desktop */
+@media (min-width: 500px) {
 .phone-shell::before {
   content: '';
   position: absolute;
@@ -1353,12 +1379,6 @@ body::before {
 
 <!-- ═════════════════════════════════════ SIDE PANEL ═══ -->
 <div class="side-panel">
-  <!-- State display -->
-  <div style="background:#13161f;border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:20px;font-family:'Inconsolata',monospace;">
-    <div style="font-size:10px;letter-spacing:0.15em;color:rgba(238,242,255,0.35);margin-bottom:14px">APP STATE · VARIABLES</div>
-    <div id="state-display" style="display:flex;flex-direction:column;gap:8px;font-size:12px"></div>
-  </div>
-
   <!-- FF Guide button -->
   <button onclick="document.getElementById('ff-doc').classList.add('visible')" style="
     width:100%;padding:18px;border-radius:14px;border:1px solid rgba(79,127,255,0.35);
