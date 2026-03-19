@@ -151,7 +151,6 @@ html, body {
 }
 
 /* notch - only on desktop */
-@media (min-width: 500px) {
 .phone-shell::before {
   content: '';
   position: absolute;
@@ -163,6 +162,9 @@ html, body {
   background: #0a0b0f;
   border-radius: 20px;
   z-index: 100;
+}
+@media (max-width: 499px) {
+  .phone-shell::before { display: none; }
 }
 
 .screen-wrap {
