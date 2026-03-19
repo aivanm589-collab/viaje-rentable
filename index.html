@@ -109,7 +109,7 @@
 html, body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -221,7 +221,7 @@ html, body {
   font-size: 10px;
   letter-spacing: 0.2em;
   color: var(--muted);
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   margin-bottom: 12px;
   text-transform: uppercase;
 }
@@ -237,7 +237,7 @@ html, body {
 .screen-sub {
   font-size: 13px;
   color: var(--muted);
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   line-height: 1.6;
   margin-bottom: 28px;
 }
@@ -277,7 +277,7 @@ html, body {
 .option-card .oc-sub {
   font-size: 11px;
   color: var(--muted);
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   line-height: 1.4;
 }
 .option-card .oc-check {
@@ -332,7 +332,7 @@ html, body {
   font-weight: 900;
   color: var(--text);
   letter-spacing: 0.06em;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   margin-bottom: 7px;
   display: block;
 }
@@ -351,7 +351,7 @@ html, body {
   font-size: 20px;
   color: var(--muted);
   font-weight: 600;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
 }
 .input-wrap input {
   background: none;
@@ -360,7 +360,7 @@ html, body {
   color: var(--text);
   font-size: 26px;
   font-weight: 700;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   width: 100%;
 }
 .input-wrap input::placeholder { color: rgba(238,242,255,0.15); }
@@ -378,7 +378,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   color: #fff;
   font-size: 16px;
   font-weight: 800;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   letter-spacing: 0.08em;
   margin-top: auto;
   transition: all 0.15s;
@@ -401,7 +401,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   background: transparent;
   color: var(--muted);
   font-size: 13px;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   cursor: pointer;
   margin-top: 10px;
   letter-spacing: 0.08em;
@@ -421,12 +421,12 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
 }
 .calc-header .ch-badge {
   font-size: 11px;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   color: var(--muted);
 }
 .calc-header .ch-val {
   font-size: 12px;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   color: var(--accent);
 }
 .ch-sep { color: var(--dim); }
@@ -441,7 +441,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   color: #fff;
   font-size: 18px;
   font-weight: 800;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   letter-spacing: 0.12em;
   margin-top: 6px;
   transition: all 0.15s;
@@ -486,7 +486,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
 .rv-sub {
   font-size: 12px;
   color: rgba(255,255,255,0.5);
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   margin-top: 4px;
 }
 
@@ -505,7 +505,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   font-size: 9px;
   letter-spacing: 0.12em;
   color: rgba(255,255,255,0.4);
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   margin-bottom: 4px;
 }
 .rv-num-val {
@@ -524,7 +524,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   padding: 9px 10px;
   text-align: center;
 }
-.rv-detail .rdl { font-size: 9px; color: rgba(255,255,255,0.3); font-family: 'Inconsolata', monospace; letter-spacing: 0.08em; }
+.rv-detail .rdl { font-size: 9px; color: rgba(255,255,255,0.3); font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace; letter-spacing: 0.08em; }
 .rv-detail .rdv { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.7); margin-top: 2px; }
 
 /* ── History ── */
@@ -541,7 +541,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   text-align: center;
   border: 1px solid var(--border);
 }
-.hs-label { font-size: 9px; color: var(--muted); font-family: 'Inconsolata', monospace; letter-spacing: 0.1em; }
+.hs-label { font-size: 9px; color: var(--muted); font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace; letter-spacing: 0.1em; }
 .hs-val { font-size: 20px; font-weight: 800; margin-top: 4px; }
 
 .history-item {
@@ -556,10 +556,10 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
 }
 .hi-icon { font-size: 20px; margin-right: 10px; }
 .hi-info .hi-main { font-size: 15px; font-weight: 700; }
-.hi-info .hi-meta { font-size: 11px; color: var(--muted); font-family: 'Inconsolata', monospace; margin-top: 1px; }
+.hi-info .hi-meta { font-size: 11px; color: var(--muted); font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace; margin-top: 1px; }
 .hi-right { text-align: right; }
 .hi-profit { font-size: 20px; font-weight: 900; }
-.hi-ph { font-size: 10px; color: var(--muted); font-family: 'Inconsolata', monospace; margin-top: 1px; }
+.hi-ph { font-size: 10px; color: var(--muted); font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace; margin-top: 1px; }
 
 /* ── Session tracker ── */
 .session-banner {
@@ -601,7 +601,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   font-size: 9px;
   letter-spacing: 0.12em;
   color: var(--muted);
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   margin-bottom: 5px;
 }
 .kpi-val {
@@ -623,7 +623,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   font-size: 10px;
   letter-spacing: 0.14em;
   color: var(--muted);
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   margin-bottom: 12px;
 }
 .summary-row {
@@ -635,7 +635,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   font-size: 13px;
 }
 .summary-row:last-child { border-bottom: none; }
-.summary-row .sr-label { color: var(--muted); font-family: 'Inconsolata', monospace; font-size: 11px; }
+.summary-row .sr-label { color: var(--muted); font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace; font-size: 11px; }
 .summary-row .sr-val   { font-weight: 700; }
 .btn-session-start {
   width: 100%;
@@ -647,7 +647,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   color: #000;
   font-size: 16px;
   font-weight: 900;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   letter-spacing: 0.08em;
   box-shadow: 0 6px 24px rgba(18,245,121,0.25);
   margin-bottom: 10px;
@@ -662,7 +662,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   color: var(--red);
   font-size: 13px;
   font-weight: 700;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   letter-spacing: 0.08em;
 }
 
@@ -687,7 +687,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   -webkit-tap-highlight-color: transparent;
 }
 .bn-icon { font-size: 19px; }
-.bn-label { font-size: 10px; font-family: 'Inconsolata', monospace; color: var(--muted); letter-spacing: 0.06em; transition: color 0.2s; }
+.bn-label { font-size: 10px; font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace; color: var(--muted); letter-spacing: 0.06em; transition: color 0.2s; }
 .bn-btn.active .bn-label { color: var(--accent); }
 .bn-btn.active .bn-icon { filter: drop-shadow(0 0 6px var(--accent)); }
 .bn-dot { width: 16px; height: 2px; border-radius: 2px; background: var(--accent); display: none; }
@@ -711,14 +711,14 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   overflow-y: auto;
   padding: 32px 28px;
   color: #eef2ff;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
 .ff-doc.visible { display: block; }
 .ff-doc h1 { font-size: 24px; font-weight: 900; margin-bottom: 6px; }
-.ff-doc .doc-sub { font-size: 13px; color: rgba(238,242,255,0.4); font-family: 'Inconsolata', monospace; margin-bottom: 28px; }
+.ff-doc .doc-sub { font-size: 13px; color: rgba(238,242,255,0.4); font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace; margin-bottom: 28px; }
 .ff-doc h2 { font-size: 15px; font-weight: 700; color: #4f7fff; letter-spacing: 0.08em; margin: 22px 0 12px; text-transform: uppercase; }
 .ff-doc h3 { font-size: 13px; font-weight: 700; color: #eef2ff; margin: 14px 0 7px; }
-.ff-doc p, .ff-doc li { font-size: 13px; color: rgba(238,242,255,0.65); line-height: 1.7; font-family: 'Inconsolata', monospace; }
+.ff-doc p, .ff-doc li { font-size: 13px; color: rgba(238,242,255,0.65); line-height: 1.7; font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace; }
 .ff-doc ul { padding-left: 16px; margin-top: 4px; }
 .ff-doc li { margin-bottom: 4px; }
 .ff-doc code {
@@ -726,7 +726,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   border: 1px solid rgba(79,127,255,0.25);
   border-radius: 5px;
   padding: 1px 6px;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   font-size: 12px;
   color: #7fa8ff;
 }
@@ -758,7 +758,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   border-radius: 5px;
   padding: 1px 8px;
   font-size: 11px;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   margin: 2px;
 }
 .ff-doc .tag.yellow { background: rgba(251,191,36,0.1); border-color: rgba(251,191,36,0.25); color: #fbbf24; }
@@ -774,7 +774,7 @@ input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
   padding: 8px 14px;
   color: rgba(238,242,255,0.6);
   font-size: 13px;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', 'SF Mono', 'Monaco', monospace;
   cursor: pointer;
   margin-bottom: 16px;
   z-index: 10;
@@ -807,6 +807,9 @@ body::before {
   .phone-shell { width: 100%; max-width: 390px; height: 750px; }
 }
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inconsolata:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
