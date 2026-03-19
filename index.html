@@ -111,18 +111,21 @@ html, body {
   color: var(--text);
   font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 @media (min-width: 500px) {
   html, body {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    background: #e2e5f0;
   }
 }
 
