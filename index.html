@@ -1948,7 +1948,24 @@ function doCalculate() {
   }
 
   const travelCost      = km * APP.costPerKm;
-  const incentiveBonus  = (APP.incentiveActive && APP.incentivePerOrder > 0) ? APP.incentivePerOrder : 0;
+  // Count today's accepted orders to check incentive completion
+  const todayStr = new Date().toDateString();
+  const todayOrders = orderHistory.filter(o => new Date(o.time).toDateString() === todayStr).length;
+  const incentiveCompleted = APP.incentiveOrders > 0 && todayOrders >= APP.incentiveOrders;
+  const incentiveBonus = (APP.incentiveActive && APP.incentivePerOrder > 0 && !incentiveCompleted)
+    ? APP.incentivePerOrder : 0;
+  
+  // Show incentive status
+  const incBar = document.getElementById('incentive-bar');
+  if (incBar && APP.incentiveActive && APP.incentiveOrders > 0) {
+    const remaining = Math.max(0, APP.incentiveOrders - todayOrders);
+    if (incentiveCompleted) {
+      incBar.querySelector('span') && (incBar.querySelector('span').textContent = '✅ Incentivo completado');
+    } else {
+      incBar.querySelector('span') && (incBar.querySelector('span').textContent = 
+        '+$' + fmt(APP.incentivePerOrder) + ' por pedido · faltan ' + remaining + ' para completar');
+    }
+  }
   const effectivePayment = payment + incentiveBonus;
   const realProfit      = effectivePayment - travelCost;
   const profitPerHour   = (realProfit / minutes) * 60;
