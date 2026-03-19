@@ -1721,7 +1721,13 @@ function selectVehicle(id, name, cpkm, cpm) {
   }
   document.getElementById('s3-mph').value   = APP.minProfitPerHour;
   updateStateDisplay();
-  setTimeout(() => goTo(2.5), 400);
+  try {
+    setTimeout(() => goTo(2.5), 400);
+  } catch(e) {
+    console.error('goTo error:', e);
+    // Fallback: directly show s25
+    setScreen('s25');
+  }
 }
 
 function goTo(step) {

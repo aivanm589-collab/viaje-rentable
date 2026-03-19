@@ -1,4 +1,4 @@
-const CACHE = 'viaje-rentable-v3';
+const CACHE = 'viaje-rentable-v5';
 const ASSETS = [
   '/index.html',
   '/manifest.json',
